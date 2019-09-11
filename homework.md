@@ -28,7 +28,7 @@ To allow the creation of an object without an id (created by database), but allo
 Instance variables require creation of the objects and use of instance variables for updating and saving. Whereas the class methods are being used to search for/create something that may not exist, for example it may be used simply to clear the whole table in the delete_all method.
 
 ##### Q8. What type of data structure is returned by calls to `db.exec_prepared()`? In the `save` method, how do we access the id from the returned data structure?
-A PostGres Result Object. (Array like object with things like Tuples = etc etc)
+A PostGres Result Object. (Array like object with things like Tuples = etc etc) ... It is returned in the save method by accessing the first element in the array like object which has the key pulled from it.
 
 ##### Q9. Why do we use prepared statements when performing database operations?
 It makes things much faster when updating/saving multiple objects. Also it helps protect against sql injection attacks.
